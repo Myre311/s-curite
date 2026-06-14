@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Phone, Menu, X, ChevronDown } from "lucide-react";
+import { Phone, PhoneCall, Menu, X, ChevronDown } from "lucide-react";
 import { mainNav } from "@/content/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { Container } from "@/components/ui/container";
@@ -34,8 +34,8 @@ export function SiteHeader() {
           : "border-transparent bg-transparent",
       )}
     >
-      <Container className="flex h-20 items-center justify-between gap-6">
-        <BrandMark />
+      <Container className="flex h-20 items-center justify-between gap-3 sm:gap-6">
+        <BrandMark hideWordmarkOnMobile />
 
         {/* Navigation desktop */}
         <nav
@@ -102,17 +102,27 @@ export function SiteHeader() {
           </Button>
         </div>
 
-        {/* Bouton menu mobile */}
-        <button
-          type="button"
-          className="text-blanc lg:hidden"
-          aria-expanded={open}
-          aria-controls="menu-mobile"
-          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        {/* Actions mobile : appel direct + menu hamburger */}
+        <div className="flex items-center gap-2.5 lg:hidden">
+          <a
+            href={`tel:${siteConfig.contact.phoneHref}`}
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-or-clair to-or px-3.5 py-2 text-xs font-semibold text-noir shadow-[0_0_20px_rgba(198,160,74,0.25)] transition-transform active:scale-95"
+            aria-label="Appeler — urgence 24/7"
+          >
+            <PhoneCall className="h-4 w-4" />
+            <span className="whitespace-nowrap">Urgence 24/7</span>
+          </a>
+          <button
+            type="button"
+            className="text-blanc"
+            aria-expanded={open}
+            aria-controls="menu-mobile"
+            aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </Container>
 
       {/* Menu mobile */}

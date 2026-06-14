@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
+import { MobileActionBar } from "@/components/layout/mobile-action-bar";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -68,7 +69,10 @@ export default function RootLayout({
           {children}
         </main>
         <SiteFooter />
+        {/* Espace pour ne pas masquer le footer derrière la barre mobile fixe */}
+        <div aria-hidden className="h-16 lg:hidden" />
         <WhatsAppFloat />
+        <MobileActionBar />
       </body>
     </html>
   );
