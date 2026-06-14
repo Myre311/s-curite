@@ -53,18 +53,18 @@ export function SiteHeader() {
                   <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
                 </button>
                 <div className="invisible absolute left-1/2 top-full w-72 -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                  <div className="rounded-lg border border-or/15 bg-noir-elevated p-2 shadow-2xl">
+                  <div className="rounded-xl border border-or/25 bg-[#141418] p-2 shadow-2xl shadow-black/70 ring-1 ring-black/60">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block rounded-md px-3 py-2.5 transition-colors hover:bg-or/10"
+                        className="block rounded-lg px-3 py-2.5 transition-colors hover:bg-or/15"
                       >
                         <span className="block text-sm font-medium text-blanc">
                           {child.label}
                         </span>
                         {child.description ? (
-                          <span className="mt-0.5 block text-xs text-blanc/55">
+                          <span className="mt-0.5 block text-xs text-blanc/65">
                             {child.description}
                           </span>
                         ) : null}
