@@ -106,7 +106,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2.5 lg:hidden">
           <a
             href={`tel:${siteConfig.contact.phoneHref}`}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-or-clair to-or px-3.5 py-2 text-xs font-semibold text-noir shadow-[0_0_20px_rgba(198,160,74,0.25)] transition-transform active:scale-95"
+            className="inline-flex items-center gap-2 rounded-full bg-red-600 px-3.5 py-2 text-xs font-semibold text-white shadow-[0_0_22px_rgba(220,38,38,0.4)] transition-colors hover:bg-red-700 active:scale-95"
             aria-label="Appeler — urgence 24/7"
           >
             <PhoneCall className="h-4 w-4" />
