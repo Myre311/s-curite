@@ -57,7 +57,8 @@ export default function RootLayout({
       lang="fr"
       className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="bg-grain flex min-h-full flex-col bg-noir text-blanc">
+      <body className="flex min-h-full flex-col bg-noir text-blanc">
+        <div aria-hidden className="grain-overlay" />
         <a
           href="#contenu"
           className="sr-only rounded bg-or px-4 py-2 font-medium text-noir focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100]"

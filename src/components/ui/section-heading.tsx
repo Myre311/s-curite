@@ -48,7 +48,7 @@ export function SectionHeading({
             <Eyebrow>{eyebrow}</Eyebrow>
           </div>
         ) : null}
-        <h2 className="mt-5 text-balance text-3xl font-medium leading-tight text-blanc sm:text-4xl md:text-[2.75rem]">
+        <h2 className="mt-5 text-balance font-serif text-[2rem] font-medium leading-[1.1] text-blanc sm:text-4xl md:text-[2.9rem]">
           {title}
         </h2>
         {body ? (

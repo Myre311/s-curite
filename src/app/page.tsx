@@ -1,5 +1,16 @@
 import Link from "next/link";
-import { ShieldCheck, Eye, Globe2, ArrowRight } from "lucide-react";
+import {
+  ShieldCheck,
+  Eye,
+  Globe2,
+  ArrowRight,
+  AlertTriangle,
+  BadgeCheck,
+  ScrollText,
+  Users,
+  Quote,
+  Plus,
+} from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
@@ -7,19 +18,93 @@ import { Button } from "@/components/ui/button";
 import { HomeHero } from "@/components/sections/home-hero";
 import { ServiceTile } from "@/components/sections/service-tile";
 import { CtaBand } from "@/components/sections/cta-band";
-import { MediaPlaceholder } from "@/components/ui/media-placeholder";
 import { home } from "@/content/home";
 import { services } from "@/content/services";
 import { zones } from "@/content/zones";
+import { faqCategories } from "@/content/faq";
 
 const pillarIcons = [ShieldCheck, Eye, Globe2];
+const riskIcons = [AlertTriangle, Eye, ScrollText, ShieldCheck];
+const trustIcons = [BadgeCheck, ScrollText, Users, Globe2];
 
 export default function HomePage() {
+  const faqPreview = faqCategories.flatMap((c) => c.items).slice(0, 5);
+
   return (
     <>
       <HomeHero />
 
-      {/* Proposition de valeur */}
+      {/* 1. Services + zones d'intervention */}
+      <section id="services" className="scroll-mt-24 py-24 sm:py-28">
+        <Container>
+          <SectionHeading
+            centered
+            eyebrow="Nos prestations"
+            title="Services de protection et zones d'intervention"
+            body={home.servicesSection.body}
+          />
+          <div className="mx-auto mt-14 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s, i) => (
+              <ServiceTile
+                key={s.slug}
+                slug={s.slug}
+                name={s.name}
+                excerpt={s.excerpt}
+                index={i}
+              />
+            ))}
+          </div>
+          <Reveal>
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
+              {zones.map((z) => (
+                <span
+                  key={z.name}
+                  className="inline-flex items-center gap-2 rounded-full border border-or/20 px-4 py-1.5 text-sm text-blanc/75"
+                >
+                  <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-or" />
+                  {z.name}
+                </span>
+              ))}
+            </div>
+            <div className="mt-8 flex justify-center">
+              <Button href="/zones-d-action" variant="outline">
+                Découvrir nos zones d&apos;intervention
+              </Button>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* 2. Les risques */}
+      <section className="border-y border-or/10 bg-noir-soft py-24 sm:py-28">
+        <Container>
+          <SectionHeading
+            eyebrow={home.risks.eyebrow}
+            title={home.risks.title}
+            body={home.risks.body}
+          />
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {home.risks.items.map((item, i) => {
+              const Icon = riskIcons[i] ?? AlertTriangle;
+              return (
+                <Reveal key={item.title} delay={i * 0.08}>
+                  <div className="flex h-full flex-col rounded-xl border border-or/15 bg-noir p-6 transition-colors hover:border-or/40">
+                    <Icon className="h-7 w-7 text-or" strokeWidth={1.4} />
+                    <h3 className="mt-5 text-base font-medium text-blanc">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-blanc/60">
+                      {item.body}
+                    </p>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
+      {/* 3. Agence haut de gamme, conçue pour rester invisible */}
       <section className="py-24 sm:py-28">
         <Container>
           <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
@@ -52,73 +137,133 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Aperçu des services */}
-      <section id="services" className="scroll-mt-24 py-24 sm:py-28">
+      {/* 4. Conformité / crédibilité (façon « agréée CNAPS ») */}
+      <section className="border-y border-or/10 bg-noir-soft py-24 sm:py-28">
         <Container>
           <SectionHeading
             centered
-            eyebrow={home.servicesSection.eyebrow}
-            title={home.servicesSection.title}
-            body={home.servicesSection.body}
+            eyebrow={home.trust.eyebrow}
+            title={home.trust.title}
+            body={home.trust.body}
           />
-          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s, i) => (
-              <ServiceTile
-                key={s.slug}
-                slug={s.slug}
-                name={s.name}
-                excerpt={s.excerpt}
-                index={i}
-                featured={s.slug === "protection-rapprochee"}
-              />
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {home.trust.items.map((item, i) => {
+              const Icon = trustIcons[i] ?? BadgeCheck;
+              return (
+                <Reveal key={item.title} delay={i * 0.08}>
+                  <div className="flex h-full flex-col items-center rounded-xl border border-or/15 bg-noir p-7 text-center transition-colors hover:border-or/40">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full border border-or/30">
+                      <Icon className="h-6 w-6 text-or" strokeWidth={1.4} />
+                    </span>
+                    <h3 className="mt-5 text-base font-medium text-blanc">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-blanc/60">
+                      {item.body}
+                    </p>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
+      {/* 5. Témoignages */}
+      <section className="py-24 sm:py-28">
+        <Container>
+          <SectionHeading
+            centered
+            eyebrow={home.testimonials.eyebrow}
+            title={home.testimonials.title}
+          />
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            {home.testimonials.items.map((t, i) => (
+              <Reveal key={t.author + i} delay={i * 0.1}>
+                <figure className="flex h-full flex-col rounded-xl border border-or/15 bg-noir-soft p-8">
+                  <Quote className="h-8 w-8 text-or/50" />
+                  <blockquote className="mt-5 flex-1 text-pretty leading-relaxed text-blanc/85">
+                    « {t.quote} »
+                  </blockquote>
+                  <figcaption className="mt-6 border-t border-or/10 pt-5">
+                    <span className="block text-sm font-medium text-blanc">
+                      {t.author}
+                    </span>
+                    <span className="text-xs uppercase tracking-[0.15em] text-or">
+                      {t.context}
+                    </span>
+                  </figcaption>
+                </figure>
+              </Reveal>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* Zones d'action */}
-      <section className="py-24 sm:py-28">
+      {/* 6. Processus / méthode */}
+      <section className="border-y border-or/10 bg-noir-soft py-24 sm:py-28">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
-            <div className="order-2 lg:order-1">
-              <Reveal>
-                <MediaPlaceholder
-                  aspectRatio="4 / 3"
-                  label="Visuel — présence internationale"
-                />
-              </Reveal>
-            </div>
-            <div className="order-1 lg:order-2">
-              <SectionHeading
-                eyebrow={home.zonesSection.eyebrow}
-                title={home.zonesSection.title}
-                body={home.zonesSection.body}
-              />
-              <Reveal delay={0.1}>
-                <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3">
-                  {zones.map((z) => (
-                    <li
-                      key={z.name}
-                      className="flex items-center gap-2.5 text-blanc/80"
-                    >
-                      <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-or" />
-                      {z.name}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-8">
-                  <Button href={home.zonesSection.cta.href} variant="outline">
-                    {home.zonesSection.cta.label}
-                  </Button>
+          <SectionHeading
+            eyebrow={home.process.eyebrow}
+            title={home.process.title}
+            body={home.process.body}
+          />
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {home.process.steps.map((step, i) => (
+              <Reveal key={step.title} delay={i * 0.1}>
+                <div className="relative h-full rounded-xl border border-or/15 bg-noir p-7">
+                  <span className="font-serif text-4xl text-or/40">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-4 text-base font-medium text-blanc">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-blanc/60">
+                    {step.body}
+                  </p>
                 </div>
               </Reveal>
-            </div>
+            ))}
           </div>
         </Container>
       </section>
 
-      {/* Bande confidentialité */}
-      <section className="border-y border-or/15 bg-noir-soft py-20">
+      {/* 7. FAQ (aperçu) */}
+      <section className="py-24 sm:py-28">
+        <Container className="max-w-3xl">
+          <SectionHeading
+            centered
+            eyebrow={home.faqPreview.eyebrow}
+            title={home.faqPreview.title}
+            body={home.faqPreview.body}
+            className="mx-auto text-center"
+          />
+          <div className="mt-12 divide-y divide-or/10 border-y border-or/10">
+            {faqPreview.map((item) => (
+              <details key={item.q} className="group py-1">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-left text-base font-medium text-blanc transition-colors hover:text-or [&::-webkit-details-marker]:hidden">
+                  {item.q}
+                  <Plus
+                    aria-hidden
+                    className="h-5 w-5 shrink-0 text-or transition-transform duration-300 group-open:rotate-45"
+                  />
+                </summary>
+                <p className="pb-6 pr-9 leading-relaxed text-blanc/65">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+          </div>
+          <div className="mt-10 flex justify-center">
+            <Button href={home.faqPreview.cta.href} variant="outline">
+              {home.faqPreview.cta.label}
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* 8. Confidentialité */}
+      <section className="border-t border-or/15 bg-noir-soft py-20">
         <Container className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
           <Reveal className="max-w-2xl">
             <h2 className="text-2xl font-medium text-blanc sm:text-3xl">
@@ -140,6 +285,7 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* 9. CTA final */}
       <CtaBand
         title={home.finalCta.title}
         body={home.finalCta.body}
