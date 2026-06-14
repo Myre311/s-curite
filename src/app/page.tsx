@@ -43,7 +43,7 @@ export default function HomePage() {
  title="Services de protection et zones d'intervention"
  body={home.servicesSection.body}
  />
- <div className="mx-auto mt-14 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+ <div className="mx-auto mt-14 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3">
  {services.map((s, i) => (
  <ServiceTile
  key={s.slug}

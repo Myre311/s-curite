@@ -22,7 +22,7 @@ export default function ZonesPage() {
 
  <section className="py-20 sm:py-24">
  <Container>
- <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+ <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
  {zones.map((z, i) => (
  <Reveal key={z.name} delay={i * 0.06}>
  <article className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-xl transition-all duration-500 ">

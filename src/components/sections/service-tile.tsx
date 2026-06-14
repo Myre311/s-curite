@@ -61,11 +61,11 @@ export function ServiceTile({
  </div>
 
  {/* Titre + texte EN DESSOUS */}
- <h3 className="mt-4 flex items-center gap-1.5 text-sm font-semibold uppercase tracking-[0.12em] text-blanc transition-colors group-hover:text-or">
+ <h3 className="mt-3 flex items-center gap-1.5 text-[0.8rem] font-semibold uppercase leading-snug tracking-[0.1em] text-blanc transition-colors group-hover:text-or sm:mt-4 sm:text-sm sm:tracking-[0.12em]">
  {name}
- <ArrowUpRight className="h-4 w-4 text-or opacity-0 transition-all duration-300 group-hover:opacity-100" />
+ <ArrowUpRight className="hidden h-4 w-4 text-or opacity-0 transition-all duration-300 group-hover:opacity-100 sm:inline" />
  </h3>
- <p className="mt-1.5 text-sm leading-relaxed text-blanc/55">{excerpt}</p>
+ <p className="mt-1.5 hidden text-sm leading-relaxed text-blanc/55 sm:block">{excerpt}</p>
  </Link>
  </Reveal>
  );
