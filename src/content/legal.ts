@@ -36,11 +36,11 @@ export const legalSections: LegalSection[] = [
     id: "cadres-reglementaires",
     title: "Cadres réglementaires (note informative)",
     paragraphs: [
-      "Les activités de sécurité privée et d'investigation sont encadrées par des réglementations spécifiques à chaque juridiction. Les informations ci-dessous sont fournies à titre purement informatif ; la conformité administrative de chaque mission relève du contexte et de la responsabilité du client.",
+      "Les activités de sécurité privée et d'investigation sont encadrées par des réglementations spécifiques à chaque juridiction.",
     ],
     items: [
       "France : activités soumises au contrôle du CNAPS (Conseil National des Activités Privées de Sécurité) et aux dispositions du Code de la sécurité intérieure.",
-      "Royaume-Uni : prestations exercées dans le respect des licences de sécurité applicables (cadre type SIA).",
+      "Royaume-Uni : prestations exercées dans le respect des licences de sécurité applicables.",
       "Maroc : interventions conduites dans le respect des cadres réglementaires locaux en vigueur.",
     ],
   },
@@ -48,10 +48,8 @@ export const legalSections: LegalSection[] = [
     id: "mentions-legales",
     title: "Mentions légales",
     paragraphs: [
-      `Éditeur du site : ${siteConfig.legal.company} (${siteConfig.legal.legalForm}).`,
-      `SIRET : ${siteConfig.legal.siret}. Adresse : ${siteConfig.legal.address}.`,
-      `Autorisation d'exercer (CNAPS) : ${siteConfig.legal.cnaps}.`,
-      `Directeur de la publication : ${siteConfig.legal.publicationDirector}.`,
+      `Éditeur du site : ${siteConfig.legal.company}.`,
+      `Adresse : ${siteConfig.legal.address}.`,
       `Hébergement : ${siteConfig.legal.host}.`,
     ],
   },

@@ -24,7 +24,7 @@ export function BrandMark({
     <Link
       href="/"
       aria-label="Global Secure & Transport — Accueil"
-      className={cn("group inline-flex items-center gap-3", className)}
+      className={cn("group inline-flex min-w-0 items-center gap-2.5", className)}
     >
       <Image
         src="/brand/emblem.jpg"
@@ -32,18 +32,18 @@ export function BrandMark({
         width={emblem}
         height={emblem}
         priority
-        className="rounded-md shadow-[0_0_18px_rgba(198,160,74,0.18)]"
+        className="shrink-0 rounded-md shadow-[0_0_18px_rgba(198,160,74,0.18)]"
       />
       <span
         className={cn(
-          "flex-col leading-none",
+          "min-w-0 flex-col leading-none",
           hideWordmarkOnMobile ? "hidden sm:flex" : "inline-flex",
         )}
       >
         <span
           className={cn(
-            "font-serif font-medium tracking-tight text-gold-gradient",
-            size === "md" ? "text-lg sm:text-xl" : "text-base",
+            "truncate font-serif font-medium tracking-tight text-gold-gradient",
+            size === "md" ? "text-sm sm:text-xl" : "text-base",
           )}
         >
           GLOBAL SECURE

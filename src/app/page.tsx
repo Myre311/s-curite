@@ -122,12 +122,20 @@ export default function HomePage() {
  />
  ))}
  </div>
+ <div className="mt-20 text-center">
+ <span className="text-xs font-medium uppercase tracking-[0.28em] text-or">
+ Présence internationale
+ </span>
+ <h3 className="mt-3 font-serif text-2xl font-medium text-blanc sm:text-3xl">
+ Nos zones d&apos;intervention
+ </h3>
+ </div>
  <Reveal>
- <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
+ <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
  {zones.map((z) => (
  <span
  key={z.name}
- className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm text-blanc/75"
+ className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm text-blanc/75 ring-1 ring-or/20"
  >
  <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-or" />
  {z.name}
