@@ -35,11 +35,11 @@ export const siteConfig = {
     /** Email de contact affiché et destinataire des demandes de devis. */
     email: "contact@globalsecuretransport.com", // PLACEHOLDER
     /** Téléphone affiché (format international lisible). */
-    phoneDisplay: "+33 6 00 00 00 00", // PLACEHOLDER
+    phoneDisplay: "+33 7 64 30 44 00",
     /** Téléphone au format tel: (chiffres + indicatif, sans espaces). */
-    phoneHref: "+33600000000", // PLACEHOLDER
+    phoneHref: "+33764304400",
     /** Numéro WhatsApp au format international sans « + » ni espaces. */
-    whatsapp: "33600000000", // PLACEHOLDER
+    whatsapp: "33764304400",
     /** Message pré-rempli pour l'ouverture de WhatsApp. */
     whatsappMessage:
       "Bonjour, je souhaite échanger en toute confidentialité au sujet de vos prestations.",
