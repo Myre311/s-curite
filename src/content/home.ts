@@ -11,6 +11,21 @@ export const home = {
     secondaryCta: { label: "Découvrir nos services", href: "#services" },
   },
 
+  signature: {
+    eyebrow: "Service signature",
+    title: "Protection Discrète des Proches",
+    body: "Le service phare de Global Secure & Transport : une surveillance invisible de vos proches — notamment vos enfants — dans leurs cadres privés et de loisirs (sorties, voyages). Une sécurité de chaque instant, sans jamais interférer avec leur liberté ni leur intimité.",
+    points: [
+      "Surveillance invisible et permanente",
+      "Protection des enfants en sorties et en voyage",
+      "Aucune interférence avec la vie privée",
+    ],
+    cta: {
+      label: "Découvrir le service signature",
+      href: "/services/protection-rapprochee",
+    },
+  },
+
   value: {
     eyebrow: "Notre engagement",
     title: "La tranquillité d'esprit, élevée au rang d'art.",

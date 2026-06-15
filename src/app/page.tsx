@@ -12,7 +12,7 @@ import {
  Plus,
 } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { SectionHeading, Eyebrow } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
 import { HomeHero } from "@/components/sections/home-hero";
@@ -33,6 +33,62 @@ export default function HomePage() {
  return (
  <>
  <HomeHero />
+
+ {/* 0. Service signature / premium — au-dessus des prestations */}
+ <section className="relative overflow-hidden py-20 sm:py-28">
+ <div
+ aria-hidden
+ className="absolute inset-0 bg-[radial-gradient(90%_90%_at_82%_15%,rgba(197,162,83,0.14),transparent_60%)]"
+ />
+ <Container className="relative">
+ <div className="grid items-center gap-12 lg:grid-cols-2">
+ <Reveal>
+ <Eyebrow>{home.signature.eyebrow}</Eyebrow>
+ <h2 className="mt-5 font-serif text-3xl font-medium leading-[1.1] sm:text-4xl md:text-5xl">
+ <span className="text-gold-gradient">{home.signature.title}</span>
+ </h2>
+ <p className="mt-5 max-w-xl text-pretty leading-relaxed text-blanc/75">
+ {home.signature.body}
+ </p>
+ <ul className="mt-7 space-y-3">
+ {home.signature.points.map((pt) => (
+ <li key={pt} className="flex items-start gap-3 text-blanc/85">
+ <span
+ aria-hidden
+ className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-or"
+ />
+ {pt}
+ </li>
+ ))}
+ </ul>
+ <div className="mt-9">
+ <Button href={home.signature.cta.href} size="lg">
+ {home.signature.cta.label}
+ </Button>
+ </div>
+ </Reveal>
+
+ {/* Visuel premium */}
+ <Reveal delay={0.1}>
+ <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+ <div
+ aria-hidden
+ className="absolute inset-0 bg-[radial-gradient(120%_120%_at_70%_0%,rgba(197,162,83,0.28),transparent_55%),linear-gradient(160deg,#1d1c22,#0a0a0b)]"
+ />
+ <div
+ aria-hidden
+ className="absolute inset-0 bg-gradient-to-t from-noir via-transparent to-transparent"
+ />
+ <ShieldCheck
+ aria-hidden
+ className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 text-or/35"
+ strokeWidth={0.8}
+ />
+ </div>
+ </Reveal>
+ </div>
+ </Container>
+ </section>
 
  {/* 1. Services + zones d'intervention */}
  <section id="services" className="scroll-mt-24 py-24 sm:py-28">
