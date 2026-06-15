@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 const initialState: ContactState = { status: "idle", message: "" };
 
 const inputClass =
- "w-full rounded-md bg-noir-soft px-4 py-3 text-blanc placeholder:text-blanc/35 transition-colors focus:border-or focus:outline-none";
+ "w-full rounded-md border border-or/25 bg-noir px-4 py-3 text-blanc placeholder:text-blanc/40 transition-colors hover:border-or/40 focus:border-or focus:ring-1 focus:ring-or/40 focus:outline-none";
 const labelClass = "mb-1.5 block text-sm font-medium text-blanc/85";
 const errorClass = "mt-1.5 text-xs text-red-400";
 
