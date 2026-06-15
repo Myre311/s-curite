@@ -13,8 +13,8 @@ export const zones: Zone[] = [
     body: "Notre ancrage historique. Une connaissance fine du territoire et de ses enjeux, au service d'une protection réactive et discrète.",
   },
   {
-    name: "Côte d'Azur",
-    region: "French Riviera",
+    name: "French Riviera",
+    region: "Côte d'Azur",
     body: "De Saint-Tropez à Monaco, un savoir-faire adapté aux résidences d'exception, aux événements privés et à la vie nautique.",
   },
   {
