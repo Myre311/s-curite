@@ -4,7 +4,7 @@ export const home = {
   hero: {
     eyebrow: "Protection privée & services de prestige",
     title: "Sécurité, discrétion et excellence",
-    titleAccent: "partout dans le monde.",
+    titleAccent: "pour vous et vos proches.",
     subtitle:
       "Global Secure & Transport accompagne dirigeants, familles et personnalités exigeantes avec une maîtrise totale et une confidentialité absolue.",
     primaryCta: { label: "Demande de devis confidentielle", href: "/contact" },
