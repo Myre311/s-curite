@@ -22,6 +22,8 @@ import { home } from "@/content/home";
 import { services } from "@/content/services";
 import { zones } from "@/content/zones";
 import { faqCategories } from "@/content/faq";
+import { ContactForm } from "@/app/contact/contact-form";
+import { SERVICE_LABELS } from "@/app/contact/service-labels";
 
 const pillarIcons = [ShieldCheck, Eye, Globe2];
 const riskIcons = [AlertTriangle, Eye, ScrollText, ShieldCheck];
@@ -62,18 +64,27 @@ export default function HomePage() {
  ))}
  </ul>
  <div className="mt-9">
- <Button href={home.signature.cta.href} size="lg">
+ <Button
+ href={home.signature.cta.href}
+ size="lg"
+ className="w-full sm:w-auto"
+ >
  {home.signature.cta.label}
  </Button>
  </div>
  </Reveal>
 
- {/* Visuel premium */}
+ {/* Visuel premium — cliquable vers le service */}
  <Reveal delay={0.1}>
- <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+ <Link
+ href={home.signature.cta.href}
+ aria-label={home.signature.cta.label}
+ className="group block"
+ >
+ <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-or/25 transition-all duration-500 group-hover:ring-or/50">
  <div
  aria-hidden
- className="absolute inset-0 bg-[radial-gradient(120%_120%_at_70%_0%,rgba(197,162,83,0.28),transparent_55%),linear-gradient(160deg,#1d1c22,#0a0a0b)]"
+ className="absolute inset-0 bg-[radial-gradient(120%_120%_at_70%_0%,rgba(197,162,83,0.28),transparent_55%),linear-gradient(160deg,#1d1c22,#0a0a0b)] transition-transform duration-700 group-hover:scale-105"
  />
  <div
  aria-hidden
@@ -81,10 +92,11 @@ export default function HomePage() {
  />
  <ShieldCheck
  aria-hidden
- className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 text-or/35"
+ className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 text-or/35 transition-all duration-500 group-hover:scale-110 group-hover:text-or/50"
  strokeWidth={0.8}
  />
  </div>
+ </Link>
  </Reveal>
  </div>
  </Container>
@@ -315,6 +327,24 @@ export default function HomePage() {
  {home.faqPreview.cta.label}
  </Button>
  </div>
+ </Container>
+ </section>
+
+ {/* 7b. Demande de devis */}
+ <section id="devis" className="scroll-mt-24 py-24 sm:py-28">
+ <Container className="max-w-3xl">
+ <SectionHeading
+ centered
+ eyebrow="Contact confidentiel"
+ title="Demande de devis confidentielle"
+ body="Chaque situation est unique. Décrivez votre besoin : nous revenons vers vous avec rigueur et discrétion."
+ className="mx-auto text-center"
+ />
+ <Reveal>
+ <div className="mt-12 rounded-2xl border border-or/25 bg-noir-soft p-6 shadow-[0_0_70px_-25px_rgba(197,162,83,0.35)] sm:p-10">
+ <ContactForm serviceLabels={[...SERVICE_LABELS]} />
+ </div>
+ </Reveal>
  </Container>
  </section>
 

@@ -22,34 +22,24 @@ export default function ZonesPage() {
 
  <section className="py-20 sm:py-24">
  <Container>
- <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
+ <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
  {zones.map((z, i) => (
  <Reveal key={z.name} delay={i * 0.06}>
- <article className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-xl transition-all duration-500 ">
- {/* Fond image (placeholder doré — à remplacer par une photo du lieu) */}
- <div
- aria-hidden
- className="absolute inset-0 scale-100 bg-[radial-gradient(120%_120%_at_70%_0%,rgba(197,162,83,0.20),transparent_55%),linear-gradient(160deg,#17171a,#0a0a0b)] transition-transform duration-700 group-hover:scale-110"
- />
- <div
- aria-hidden
- className="absolute inset-0 bg-gradient-to-t from-noir via-noir/55 to-transparent"
- />
- {/* Contenu */}
- <div className="relative p-7">
+ <article className="group relative h-full overflow-hidden rounded-xl bg-[radial-gradient(130%_130%_at_75%_0%,rgba(197,162,83,0.12),transparent_55%),linear-gradient(160deg,#161519,#0c0c0e)] p-7 ring-1 ring-or/15 transition-all duration-500 hover:ring-or/45">
+ {/* En-tête : nom + région */}
  <div className="flex items-center gap-2.5">
- <MapPin className="h-4 w-4 text-or" />
+ <MapPin className="h-4 w-4 shrink-0 text-or" />
  <span className="text-[10px] uppercase tracking-[0.2em] text-or">
  {z.region}
  </span>
  </div>
- <h2 className="mt-2 font-serif text-3xl font-medium text-blanc">
+ <h2 className="mt-3 font-serif text-2xl font-medium text-blanc sm:text-3xl">
  {z.name}
  </h2>
- <p className="mt-3 text-sm leading-relaxed text-blanc/70">
+ <div aria-hidden className="mt-4 h-px w-12 bg-or/40" />
+ <p className="mt-4 text-sm leading-relaxed text-blanc/70">
  {z.body}
  </p>
- </div>
  </article>
  </Reveal>
  ))}

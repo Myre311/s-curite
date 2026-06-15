@@ -43,7 +43,7 @@ export function ServiceTile({
  <Reveal delay={index * 0.07}>
  <Link href={`/services/${slug}`} className="group block">
  {/* Visuel carré */}
- <div className="relative aspect-square overflow-hidden rounded-xl transition-all duration-500 ">
+ <div className="relative aspect-square overflow-hidden rounded-xl ring-1 ring-or/15 transition-all duration-500 group-hover:ring-or/45">
  {/* Fond (placeholder doré — à remplacer par une photo) */}
  <div
  aria-hidden

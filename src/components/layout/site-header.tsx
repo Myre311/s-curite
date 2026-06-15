@@ -34,8 +34,8 @@ export function SiteHeader() {
           : "border-transparent bg-transparent",
       )}
     >
-      <Container className="flex h-20 items-center justify-between gap-3 sm:gap-6">
-        <BrandMark hideWordmarkOnMobile />
+      <Container className="flex h-20 items-center justify-between gap-2 sm:gap-6">
+        <BrandMark />
 
         {/* Navigation desktop */}
         <nav
@@ -92,10 +92,11 @@ export function SiteHeader() {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={`tel:${siteConfig.contact.phoneHref}`}
-            className="flex items-center gap-2 text-sm text-blanc/80 transition-colors hover:text-or"
+            className="inline-flex items-center gap-2 rounded-full bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-[0_0_22px_rgba(220,38,38,0.35)] transition-colors hover:bg-red-700"
+            aria-label="Appeler — urgence 24/7"
           >
-            <Phone className="h-4 w-4 text-or" />
-            <span className="tabular-nums">{siteConfig.contact.phoneDisplay}</span>
+            <PhoneCall className="h-4 w-4" />
+            <span className="whitespace-nowrap">Urgence 24/7</span>
           </a>
           <Button href="/contact" size="sm">
             Demande de devis
@@ -106,11 +107,10 @@ export function SiteHeader() {
         <div className="flex items-center gap-2.5 lg:hidden">
           <a
             href={`tel:${siteConfig.contact.phoneHref}`}
-            className="inline-flex items-center gap-2 rounded-full bg-red-600 px-3.5 py-2 text-xs font-semibold text-white shadow-[0_0_22px_rgba(220,38,38,0.4)] transition-colors hover:bg-red-700 active:scale-95"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white shadow-[0_0_22px_rgba(220,38,38,0.45)] transition-colors hover:bg-red-700 active:scale-95"
             aria-label="Appeler — urgence 24/7"
           >
-            <PhoneCall className="h-4 w-4" />
-            <span className="whitespace-nowrap">Urgence 24/7</span>
+            <PhoneCall className="h-5 w-5" />
           </a>
           <button
             type="button"
