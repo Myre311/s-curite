@@ -90,7 +90,7 @@ export const home = {
     items: [
       {
         title: "Cadre réglementaire",
-        body: "CNAPS en France, licences de sécurité au Royaume-Uni, cadres spécifiques au Maroc.",
+        body: "CNAPS en France, licences de sécurité au Royaume-Uni, et cadres réglementaires locaux internationaux.",
       },
       {
         title: "NDA systématique",
@@ -102,7 +102,7 @@ export const home = {
       },
       {
         title: "Standards uniformes",
-        body: "La même rigueur à Marseille, Paris, Londres ou au Maroc.",
+        body: "La même rigueur à Marseille, Paris, Londres et partout dans le monde.",
       },
     ],
   },
@@ -128,6 +128,12 @@ export const home = {
           "La protection de mes enfants, assurée sans jamais empiéter sur leur liberté. Irréprochable.",
         author: "Cliente privée",
         context: "Paris",
+      },
+      {
+        quote:
+          "L'agent Lucas a accompagné ma fille de 18 ans et ses amies à leur première sortie en festival à Marseille. Avec mon épouse, nous avons enfin passé une soirée et une nuit agréables, sans nous faire mille et un scénarios défavorables. Il nous a régulièrement tenus au courant par SMS.",
+        author: "Client",
+        context: "Chirurgien, Hôpital Nord — Marseille",
       },
     ],
   },

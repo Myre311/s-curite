@@ -30,7 +30,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: "Comment sont sélectionnés vos agents ?",
-        a: "Nos intervenants sont recrutés et formés en continu pour garantir un professionnalisme et une discrétion irréprochables, notamment pour les missions en tenue civile. Les protocoles d'intervention sont standardisés pour offrir la même rigueur à Marseille, Paris, Londres ou au Maroc.",
+        a: "Nos intervenants sont recrutés et formés en continu pour garantir un professionnalisme et une discrétion irréprochables, notamment pour les missions en tenue civile. Les protocoles d'intervention sont standardisés pour offrir la même rigueur à Marseille, Paris, Londres et partout dans le monde.",
       },
     ],
   },
@@ -56,7 +56,7 @@ export const faqCategories: FaqCategory[] = [
     items: [
       {
         q: "Dans quelles zones intervenez-vous ?",
-        a: "Nous opérons sur les hubs majeurs : Marseille, la Côte d'Azur (French Riviera), les stations de ski, Paris, le Maroc et Londres — avec les mêmes standards de rigueur dans chaque juridiction.",
+        a: "Nous opérons sur les hubs majeurs : Marseille, la Côte d'Azur (French Riviera), les stations de ski, Paris, Marrakech, Dubaï et Londres — avec les mêmes standards de rigueur dans chaque juridiction.",
       },
       {
         q: "Que comprennent la conciergerie et les prestations de majordome ?",

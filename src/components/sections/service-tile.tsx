@@ -5,6 +5,7 @@ import {
  Car,
  ConciergeBell,
  Crown,
+ Ticket,
  ArrowUpRight,
  type LucideIcon,
 } from "lucide-react";
@@ -16,6 +17,7 @@ const ICONS: Record<string, LucideIcon> = {
  "transport-personnalite": Car,
  conciergerie: ConciergeBell,
  majordome: Crown,
+ billetterie: Ticket,
 };
 
 /**

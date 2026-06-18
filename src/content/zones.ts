@@ -28,9 +28,14 @@ export const zones: Zone[] = [
     body: "La capitale et ses exigences : déplacements protégés, sécurisation d'événements et accompagnement de personnalités.",
   },
   {
-    name: "Maroc",
+    name: "Marrakech",
     region: "Afrique du Nord",
-    body: "Une présence dédiée, dans le respect des cadres réglementaires locaux et avec les mêmes standards de rigueur.",
+    body: "Une présence dédiée pour vos séjours, résidences et déplacements : protection, logistique et discrétion aux standards internationaux.",
+  },
+  {
+    name: "Dubaï",
+    region: "Émirats arabes unis",
+    body: "Sécurité et accompagnement haut de gamme aux Émirats : déplacements protégés, résidences et événements, dans le respect des cadres locaux.",
   },
   {
     name: "Londres",
@@ -45,5 +50,5 @@ export const zonesPage = {
   intro:
     "Où que vous soyez, nous appliquons la même rigueur opérationnelle et la même discrétion. Nos dispositifs s'adaptent aux cadres réglementaires de chaque juridiction, sans jamais transiger sur l'excellence.",
   reassurance:
-    "Dans chaque zone, nos interventions respectent les cadres réglementaires applicables (CNAPS en France, licences de sécurité au Royaume-Uni, cadres spécifiques au Maroc). La conformité administrative finale relève de la responsabilité du client et du contexte de la mission.",
+    "Dans chaque zone, nos interventions respectent les cadres réglementaires applicables (CNAPS en France, licences de sécurité au Royaume-Uni, et cadres réglementaires locaux à l'international). La conformité administrative finale relève de la responsabilité du client et du contexte de la mission.",
 };

@@ -41,7 +41,7 @@ export const legalSections: LegalSection[] = [
     items: [
       "France : activités soumises au contrôle du CNAPS (Conseil National des Activités Privées de Sécurité) et aux dispositions du Code de la sécurité intérieure.",
       "Royaume-Uni : prestations exercées dans le respect des licences de sécurité applicables.",
-      "Maroc : interventions conduites dans le respect des cadres réglementaires locaux en vigueur.",
+      "International : interventions conduites dans le respect des cadres réglementaires locaux en vigueur.",
     ],
   },
   {

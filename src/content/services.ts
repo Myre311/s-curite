@@ -74,7 +74,7 @@ export const services: Service[] = [
   },
   {
     slug: "enquetes-filatures",
-    name: "Enquêtes & Filatures",
+    name: "Enquêtes & Filatures (service de détective)",
     tagline: "La vérité, établie avec rigueur et discrétion.",
     excerpt:
       "Détective privé : investigations familiales, commerciales et immobilières.",
@@ -115,12 +115,12 @@ export const services: Service[] = [
   },
   {
     slug: "transport-personnalite",
-    name: "Transport de personnes avec Chauffeur avec véhicule adapté",
+    name: "Transport avec Chauffeur privé pour Tout déplacement et transfert",
     tagline: "Le confort absolu, sous protection permanente.",
     excerpt:
       "Mobilité premium : déplacements sécurisés, point à point, en toute sérénité.",
     intro:
-      "Le transport de personnes avec chauffeur et véhicule adapté allie l'exigence du confort à la rigueur de la sécurité. De votre point de départ à votre destination, chaque déplacement est planifié, sécurisé et exécuté par des chauffeurs-agents formés à la conduite de sûreté.",
+      "Le transport avec chauffeur privé allie l'exigence du confort à la rigueur de la sécurité. De votre point de départ à votre destination, chaque déplacement est planifié, sécurisé et exécuté par des chauffeurs-agents formés à la conduite de sûreté.",
     modules: [
       {
         title: "Mobilité Premium",
@@ -190,6 +190,38 @@ export const services: Service[] = [
     ],
     reassurance:
       "Discrétion, fiabilité et excellence guident chacune de nos interventions, sous accord de confidentialité.",
+  },
+  {
+    slug: "billetterie",
+    name: "Prestation de Billetteries tout événement",
+    tagline: "Un accès privilégié à tous vos événements.",
+    excerpt:
+      "Obtention et gestion de billets pour tout événement : spectacles, sport, galas et soirées privées.",
+    intro:
+      "Notre service de billetterie vous ouvre les portes des événements les plus convoités. Concerts, rencontres sportives, galas, défilés ou soirées privées : nous obtenons vos places, coordonnons la logistique et garantissons un accès fluide et discret, en France comme à l'international.",
+    modules: [
+      {
+        title: "Accès & Réservations",
+        body: "Obtention de billets et de places privilégiées pour tout type d'événement, y compris les plus difficiles d'accès. Loges, carrés VIP, premières et événements complets.",
+        points: [
+          "Spectacles, concerts et festivals",
+          "Rencontres sportives et compétitions",
+          "Galas, défilés et événements privés",
+          "Loges privées et accès VIP",
+        ],
+      },
+      {
+        title: "Logistique & Accompagnement",
+        body: "Une prise en charge de bout en bout : transport sécurisé, coordination des horaires et accompagnement sur place, en lien avec votre dispositif de protection si nécessaire.",
+        points: [
+          "Coordination des billets et des accès",
+          "Transport et itinéraires sécurisés",
+          "Accompagnement discret sur l'événement",
+        ],
+      },
+    ],
+    reassurance:
+      "Vos demandes et votre présence aux événements demeurent strictement confidentielles, sous accord de non-divulgation.",
   },
 ];
 

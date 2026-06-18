@@ -27,12 +27,12 @@ export const mainNav: NavGroup[] = [
         description: "Diplomates, dirigeants, personnalités et proches.",
       },
       {
-        label: "Enquêtes & Filatures",
+        label: "Enquêtes & Filatures (service de détective)",
         href: "/services/enquetes-filatures",
         description: "Détective privé : familial, commercial, immobilier.",
       },
       {
-        label: "Transport de personnes avec Chauffeur avec véhicule adapté",
+        label: "Transport avec Chauffeur privé pour Tout déplacement et transfert",
         href: "/services/transport-personnalite",
         description: "Mobilité premium et sécurisée, point à point.",
       },
@@ -45,6 +45,11 @@ export const mainNav: NavGroup[] = [
         label: "Prestations de Majordome",
         href: "/services/majordome",
         description: "Intendance et accès exclusif à l'art de vivre.",
+      },
+      {
+        label: "Prestation de Billetteries tout événement",
+        href: "/services/billetterie",
+        description: "Accès et billets pour tout événement : spectacles, sport, galas.",
       },
     ],
   },
