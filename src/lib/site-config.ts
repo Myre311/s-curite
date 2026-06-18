@@ -23,7 +23,7 @@ export const siteConfig = {
   tagline: "Sécurité, discrétion et excellence — partout dans le monde.",
   /** Description SEO par défaut. */
   description:
-    "Société de protection privée et de services de prestige : protection rapprochée, enquêtes & filatures, transport de personnalité, conciergerie et majordome. Discrétion absolue, standards d'excellence internationaux.",
+    "Société de protection privée et de services de prestige : protection rapprochée, enquêtes & filatures, transport de personnes avec chauffeur, conciergerie et majordome. Discrétion absolue, standards d'excellence internationaux.",
   /** URL de production (à mettre à jour avant déploiement). */
   url: "https://www.globalsecuretransport.com", // PLACEHOLDER
 

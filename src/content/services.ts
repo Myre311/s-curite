@@ -115,12 +115,12 @@ export const services: Service[] = [
   },
   {
     slug: "transport-personnalite",
-    name: "Transport de Personnalité",
+    name: "Transport de personnes avec Chauffeur avec véhicule adapté",
     tagline: "Le confort absolu, sous protection permanente.",
     excerpt:
       "Mobilité premium : déplacements sécurisés, point à point, en toute sérénité.",
     intro:
-      "Le Transport de Personnalité allie l'exigence du confort à la rigueur de la sécurité. De votre point de départ à votre destination, chaque déplacement est planifié, sécurisé et exécuté par des chauffeurs-agents formés à la conduite de sûreté.",
+      "Le transport de personnes avec chauffeur et véhicule adapté allie l'exigence du confort à la rigueur de la sécurité. De votre point de départ à votre destination, chaque déplacement est planifié, sécurisé et exécuté par des chauffeurs-agents formés à la conduite de sûreté.",
     modules: [
       {
         title: "Mobilité Premium",

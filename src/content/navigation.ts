@@ -32,7 +32,7 @@ export const mainNav: NavGroup[] = [
         description: "Détective privé : familial, commercial, immobilier.",
       },
       {
-        label: "Transport de Personnalité",
+        label: "Transport de personnes avec Chauffeur avec véhicule adapté",
         href: "/services/transport-personnalite",
         description: "Mobilité premium et sécurisée, point à point.",
       },
