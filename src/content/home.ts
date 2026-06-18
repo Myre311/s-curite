@@ -131,9 +131,39 @@ export const home = {
       },
       {
         quote:
-          "L'agent Lucas a accompagné ma fille de 18 ans et ses amies à leur première sortie en festival à Marseille. Avec mon épouse, nous avons enfin passé une soirée et une nuit agréables, sans nous faire mille et un scénarios défavorables. Il nous a régulièrement tenus au courant par SMS.",
+          "L'agent X a accompagné ma fille de 18 ans et ses amies à leur première sortie en festival à Marseille. Avec mon épouse, nous avons enfin passé une soirée et une nuit agréables, sans nous faire mille et un scénarios défavorables. Il nous a régulièrement tenus au courant par SMS.",
         author: "Client",
         context: "Chirurgien, Hôpital Nord — Marseille",
+      },
+      {
+        quote:
+          "Je soupçonnais un salarié de travailler ailleurs pendant son arrêt maladie. Monsieur X a mené l'enquête avec une discrétion totale et m'a remis un dossier clair, daté et exploitable devant les prud'hommes. Sans lui, je serais restée dans le doute pendant des mois.",
+        author: "Cliente",
+        context: "Gérante de PME — Lyon",
+      },
+      {
+        quote:
+          "Entre deux audiences, je ne me soucie plus de rien : Monsieur X connaît mes horaires, anticipe le trafic et m'attend toujours à la sortie. Voiture impeccable, ponctualité absolue — je travaille ou je souffle pendant le trajet, l'esprit tranquille.",
+        author: "Client",
+        context: "Avocat d'affaires — Paris",
+      },
+      {
+        quote:
+          "Je voyage trois semaines par mois. La conciergerie gère tout en mon absence : démarches, livraisons, rendez-vous, intendance de la maison. X me fait un point chaque semaine. J'ai récupéré un temps et une sérénité que je croyais perdus.",
+        author: "Cliente",
+        context: "Dirigeante d'un groupe familial — Genève",
+      },
+      {
+        quote:
+          "L'été, nous recevons beaucoup. X orchestre le personnel, les réceptions et les moindres détails avec une rigueur irréprochable. Nos invités repartent marqués par la qualité du service — et nous, nous profitons enfin de nos soirées.",
+        author: "Client",
+        context: "Propriétaire d'une villa — Côte d'Azur",
+      },
+      {
+        quote:
+          "J'avais promis la finale à mon fils ; on me l'avait dite introuvable à trois jours. L'équipe m'a obtenu deux places en tribune, avec le transport et l'accès. Un souvenir qu'il n'oubliera jamais — et zéro stress de mon côté.",
+        author: "Client",
+        context: "Chef d'entreprise — Marseille",
       },
     ],
   },
