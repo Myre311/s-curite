@@ -33,7 +33,7 @@ export const siteConfig = {
    */
   contact: {
     /** Email de contact affiché et destinataire des demandes de devis. */
-    email: "contact@globalsecuretransport.com", // PLACEHOLDER
+    email: "contact@global-secure-transport.com",
     /** Téléphone affiché (format international lisible). */
     phoneDisplay: "+33 7 64 30 44 00",
     /** Téléphone au format tel: (chiffres + indicatif, sans espaces). */

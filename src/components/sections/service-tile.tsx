@@ -21,13 +21,22 @@ const ICONS: Record<string, LucideIcon> = {
  billetterie: Ticket,
 };
 
-/** Slugs disposant d'une photo dans /public/photos/<slug>.jpg. */
+/** Slugs disposant d'une photo dans /public/photos/<slug>-0.jpg. */
 const PHOTOS = new Set<string>([
  "protection-rapprochee",
  "enquetes-filatures",
  "transport-personnalite",
  "conciergerie",
 ]);
+
+/**
+ * Position de cadrage (object-position) par slug pour le carré d'accueil.
+ * protection-rapprochee : décalage à droite pour conserver le client ET l'agent
+ * (sinon l'agent à droite était coupé en un bout disgracieux).
+ */
+const TILE_OBJECT_POS: Record<string, string> = {
+ "protection-rapprochee": "object-[70%_center]",
+};
 
 /**
  * Carré de service — visuel carré (photo) + titre EN DESSOUS (style rj2m).
@@ -63,7 +72,7 @@ export function ServiceTile({
  alt={name}
  fill
  sizes="(min-width: 1024px) 33vw, 50vw"
- className="object-cover transition-transform duration-700 group-hover:scale-110"
+ className={`object-cover ${TILE_OBJECT_POS[slug] ?? "object-center"} transition-transform duration-700 group-hover:scale-110`}
  />
  {/* Voile sombre pour la lisibilité + accent doré au survol */}
  <div

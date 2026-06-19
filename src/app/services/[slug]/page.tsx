@@ -20,6 +20,15 @@ const SERVICE_PHOTO_COUNTS: Record<string, number> = {
  conciergerie: 1,
 };
 
+/**
+ * Ajustement de cadrage (object-position) par `<slug>-<moduleIndex>`.
+ * La photo de la Sphère Commerciale (détective au volant) avait la tête coupée
+ * en haut → on cale le cadrage vers le haut.
+ */
+const MODULE_OBJECT_POS: Record<string, string> = {
+ "enquetes-filatures-1": "object-top",
+};
+
 export function generateStaticParams() {
  return services.map((s) => ({ slug: s.slug }));
 }
@@ -89,6 +98,9 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
  i < (SERVICE_PHOTO_COUNTS[service.slug] ?? 0)
  ? `/photos/${service.slug}-${i}.jpg`
  : undefined
+ }
+ objectPosition={
+ MODULE_OBJECT_POS[`${service.slug}-${i}`] ?? "object-center"
  }
  alt={`${service.name} — ${mod.title}`}
  />

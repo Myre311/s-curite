@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
  ShieldCheck,
  Eye,
@@ -82,18 +83,16 @@ export default function HomePage() {
  className="group block"
  >
  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-or/25 transition-all duration-500 group-hover:ring-or/50">
- <div
- aria-hidden
- className="absolute inset-0 bg-[radial-gradient(120%_120%_at_70%_0%,rgba(197,162,83,0.28),transparent_55%),linear-gradient(160deg,#1d1c22,#0a0a0b)] transition-transform duration-700 group-hover:scale-105"
+ <Image
+ src="/photos/signature-proches.jpg"
+ alt={home.signature.title}
+ fill
+ sizes="(min-width: 1024px) 40vw, 100vw"
+ className="object-cover transition-transform duration-700 group-hover:scale-105"
  />
  <div
  aria-hidden
- className="absolute inset-0 bg-gradient-to-t from-noir via-transparent to-transparent"
- />
- <ShieldCheck
- aria-hidden
- className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 text-or/35 transition-all duration-500 group-hover:scale-110 group-hover:text-or/50"
- strokeWidth={0.8}
+ className="absolute inset-0 bg-gradient-to-t from-noir/85 via-noir/10 to-transparent"
  />
  </div>
  </Link>

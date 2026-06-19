@@ -12,6 +12,7 @@ export function MediaPlaceholder({
   variant = "default",
   src,
   alt,
+  objectPosition = "object-center",
 }: {
   className?: string;
   aspectRatio?: string;
@@ -21,6 +22,8 @@ export function MediaPlaceholder({
   /** Chemin d'une vraie photo (ex. /photos/xxx.jpg). */
   src?: string;
   alt?: string;
+  /** Classe Tailwind object-position (ex. "object-top") pour ajuster le cadrage. */
+  objectPosition?: string;
 }) {
   if (src) {
     return (
@@ -36,7 +39,7 @@ export function MediaPlaceholder({
           alt={alt ?? label ?? ""}
           fill
           sizes="(min-width: 1024px) 50vw, 100vw"
-          className="object-cover"
+          className={`object-cover ${objectPosition}`}
         />
         <div
           aria-hidden
