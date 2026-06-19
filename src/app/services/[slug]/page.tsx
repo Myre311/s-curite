@@ -18,6 +18,8 @@ const SERVICE_PHOTO_COUNTS: Record<string, number> = {
  "enquetes-filatures": 3,
  "transport-personnalite": 1,
  conciergerie: 1,
+ majordome: 2,
+ billetterie: 1,
 };
 
 /**

@@ -27,6 +27,8 @@ const PHOTOS = new Set<string>([
  "enquetes-filatures",
  "transport-personnalite",
  "conciergerie",
+ "majordome",
+ "billetterie",
 ]);
 
 /**

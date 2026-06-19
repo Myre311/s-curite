@@ -143,7 +143,7 @@ export const home = {
       },
       {
         quote:
-          "Entre deux audiences, je ne me soucie plus de rien : Monsieur X connaît mes horaires, anticipe le trafic et m'attend toujours à la sortie. Voiture impeccable, ponctualité absolue — je travaille ou je souffle pendant le trajet, l'esprit tranquille.",
+          "Entre deux audiences, je ne me soucie plus de rien : Monsieur X connaît mes horaires, anticipe le trafic et m'attend toujours à la sortie. Voiture impeccable, ponctualité absolue : je travaille ou je souffle pendant le trajet, l'esprit tranquille.",
         author: "Client",
         context: "Avocat d'affaires Paris",
       },
@@ -155,13 +155,13 @@ export const home = {
       },
       {
         quote:
-          "L'été, nous recevons beaucoup. X orchestre le personnel, les réceptions et les moindres détails avec une rigueur irréprochable. Nos invités repartent marqués par la qualité du service — et nous, nous profitons enfin de nos soirées.",
+          "L'été, nous recevons beaucoup. X orchestre le personnel, les réceptions et les moindres détails avec une rigueur irréprochable. Nos invités repartent marqués par la qualité du service. Et nous, nous profitons enfin de nos soirées.",
         author: "Client",
         context: "Propriétaire d'une villa Côte d'Azur",
       },
       {
         quote:
-          "J'avais promis la finale à mon fils, on me l'avait dite introuvable à trois jours. L'équipe m'a obtenu deux places en tribune, avec le transport et l'accès. Un souvenir qu'il n'oubliera jamais — et zéro stress de mon côté.",
+          "J'avais promis la finale à mon fils, on me l'avait dite introuvable à trois jours. L'équipe m'a obtenu deux places en tribune, avec le transport et l'accès. Un souvenir qu'il n'oubliera jamais, et zéro stress de mon côté.",
         author: "Client",
         context: "Chef d'entreprise Marseille",
       },
