@@ -1,29 +1,51 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 /**
- * Bloc visuel placeholder premium (dégradé noir→doré + lignes fines).
- *
- * >>> À REMPLACER PAR LE CLIENT <<<
- * Lorsque les vraies photos seront fournies, remplacer ce composant par un
- * <Image> Next.js :
- *
- *   import Image from "next/image";
- *   <div className="relative overflow-hidden rounded-lg" style={{ aspectRatio }}>
- *     <Image src="/photos/xxx.jpg" alt="..." fill className="object-cover" />
- *   </div>
+ * Bloc visuel premium. Si [src] est fourni, affiche la photo (object-cover) ;
+ * sinon, placeholder (dégradé noir→doré + lignes fines) en attendant la photo.
  */
 export function MediaPlaceholder({
   className,
   aspectRatio = "4 / 3",
   label,
   variant = "default",
+  src,
+  alt,
 }: {
   className?: string;
   aspectRatio?: string;
   /** Légende discrète indiquant l'emplacement de la future photo. */
   label?: string;
   variant?: "default" | "tall" | "wide";
+  /** Chemin d'une vraie photo (ex. /photos/xxx.jpg). */
+  src?: string;
+  alt?: string;
 }) {
+  if (src) {
+    return (
+      <div
+        className={cn(
+          "relative overflow-hidden rounded-lg border border-or/15 bg-noir-soft",
+          className,
+        )}
+        style={{ aspectRatio }}
+      >
+        <Image
+          src={src}
+          alt={alt ?? label ?? ""}
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-t from-noir/35 to-transparent"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn(

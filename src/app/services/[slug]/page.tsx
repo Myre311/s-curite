@@ -9,6 +9,17 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { MediaPlaceholder } from "@/components/ui/media-placeholder";
 import { services, getService } from "@/content/services";
 
+/**
+ * Nombre de photos disponibles par service, dans /public/photos/<slug>-<i>.jpg
+ * (un visuel par module, dans l'ordre des modules de services.ts).
+ */
+const SERVICE_PHOTO_COUNTS: Record<string, number> = {
+ "protection-rapprochee": 3,
+ "enquetes-filatures": 3,
+ "transport-personnalite": 1,
+ conciergerie: 1,
+};
+
 export function generateStaticParams() {
  return services.map((s) => ({ slug: s.slug }));
 }
@@ -74,6 +85,12 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
  <MediaPlaceholder
  aspectRatio="4 / 3"
  label={`Visuel — ${mod.title}`}
+ src={
+ i < (SERVICE_PHOTO_COUNTS[service.slug] ?? 0)
+ ? `/photos/${service.slug}-${i}.jpg`
+ : undefined
+ }
+ alt={`${service.name} — ${mod.title}`}
  />
  </div>
  </article>

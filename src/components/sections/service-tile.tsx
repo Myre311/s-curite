@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
  ShieldCheck,
  Search,
@@ -20,12 +21,20 @@ const ICONS: Record<string, LucideIcon> = {
  billetterie: Ticket,
 };
 
+/** Slugs disposant d'une photo dans /public/photos/<slug>.jpg. */
+const PHOTOS = new Set<string>([
+ "protection-rapprochee",
+ "enquetes-filatures",
+ "transport-personnalite",
+ "conciergerie",
+]);
+
 /**
  * Carré de service — visuel carré (photo) + titre EN DESSOUS (style rj2m).
  *
- * Le visuel utilise un dégradé doré placeholder. Pour une vraie photo,
- * remplacer le bloc `Fond` par :
- * <Image src="/photos/<slug>.jpg" alt="" fill className="object-cover" />
+ * Si une photo existe pour le slug (cf. PHOTOS), on l'affiche en `object-cover`
+ * avec un voile sombre pour la lisibilité ; sinon on retombe sur le dégradé
+ * doré + icône.
  */
 export function ServiceTile({
  slug,
@@ -40,13 +49,31 @@ export function ServiceTile({
  featured?: boolean;
 }) {
  const Icon = ICONS[slug] ?? ShieldCheck;
+ const hasPhoto = PHOTOS.has(slug);
 
  return (
  <Reveal delay={index * 0.07}>
  <Link href={`/services/${slug}`} className="group block">
  {/* Visuel carré */}
  <div className="relative aspect-square overflow-hidden rounded-xl ring-1 ring-or/15 transition-all duration-500 group-hover:ring-or/45">
- {/* Fond (placeholder doré — à remplacer par une photo) */}
+ {hasPhoto ? (
+ <>
+ <Image
+ src={`/photos/${slug}-0.jpg`}
+ alt={name}
+ fill
+ sizes="(min-width: 1024px) 33vw, 50vw"
+ className="object-cover transition-transform duration-700 group-hover:scale-110"
+ />
+ {/* Voile sombre pour la lisibilité + accent doré au survol */}
+ <div
+ aria-hidden
+ className="absolute inset-0 bg-gradient-to-t from-noir/80 via-noir/15 to-transparent"
+ />
+ </>
+ ) : (
+ <>
+ {/* Fond (placeholder doré) */}
  <div
  aria-hidden
  className="absolute inset-0 scale-100 bg-[radial-gradient(120%_120%_at_75%_0%,rgba(197,162,83,0.22),transparent_55%),linear-gradient(160deg,#1b1b20,#0a0a0b)] transition-transform duration-700 group-hover:scale-110"
@@ -60,6 +87,8 @@ export function ServiceTile({
  className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 text-or/30 transition-all duration-500 group-hover:scale-110 group-hover:text-or/45"
  strokeWidth={0.9}
  />
+ </>
+ )}
  </div>
 
  {/* Titre + texte EN DESSOUS */}
