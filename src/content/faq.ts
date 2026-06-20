@@ -43,7 +43,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: "En quoi consiste la « protection discrète des proches » ?",
-        a: "C'est notre service signature : une surveillance invisible de vos proches — notamment vos enfants — dans des cadres privés ou de loisirs (sorties, voyages). L'objectif est d'assurer leur sécurité sans jamais interférer avec leur liberté ni leur intimité.",
+        a: "C'est notre service signature : une surveillance invisible de vos proches, notamment vos enfants, dans des cadres privés ou de loisirs (sorties, voyages). L'objectif est d'assurer leur sécurité sans jamais interférer avec leur liberté ni leur intimité.",
       },
       {
         q: "Vos enquêtes et filatures sont-elles légales ?",
@@ -56,7 +56,7 @@ export const faqCategories: FaqCategory[] = [
     items: [
       {
         q: "Dans quelles zones intervenez-vous ?",
-        a: "Nous opérons sur les hubs majeurs : Marseille, la Côte d'Azur (French Riviera), les stations de ski, Paris, Marrakech, Dubaï et Londres — avec les mêmes standards de rigueur dans chaque juridiction.",
+        a: "Nous opérons sur les hubs majeurs : Marseille, la Côte d'Azur (French Riviera), les stations de ski, Paris, Marrakech, Dubaï et Londres, avec les mêmes standards de rigueur dans chaque juridiction.",
       },
       {
         q: "Que comprennent la conciergerie et les prestations de majordome ?",

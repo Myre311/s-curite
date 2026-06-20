@@ -23,7 +23,7 @@ export function BrandMark({
   return (
     <Link
       href="/"
-      aria-label="Global Secure & Transport — Accueil"
+      aria-label="Global Secure & Transport, Accueil"
       className={cn("group inline-flex min-w-0 items-center gap-2.5", className)}
     >
       <Image

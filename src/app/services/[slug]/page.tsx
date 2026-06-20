@@ -97,7 +97,7 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
  <div className={i % 2 === 1 ? "lg:order-1" : ""}>
  <MediaPlaceholder
  aspectRatio="4 / 3"
- label={`Visuel — ${mod.title}`}
+ label={`Visuel, ${mod.title}`}
  src={
  i < (SERVICE_PHOTO_COUNTS[service.slug] ?? 0)
  ? `/photos/${service.slug}-${i}.jpg`
@@ -106,7 +106,7 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
  objectPosition={
  MODULE_OBJECT_POS[`${service.slug}-${i}`] ?? "object-center"
  }
- alt={`${service.name} — ${mod.title}`}
+ alt={`${service.name}, ${mod.title}`}
  />
  </div>
  </article>

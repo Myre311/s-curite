@@ -60,7 +60,7 @@ export const services: Service[] = [
       {
         title: "Protection Discrète des Proches",
         signature: true,
-        body: "Notre service signature. Une surveillance invisible des personnes qui vous sont chères — notamment des enfants — dans leurs cadres privés et de loisirs : sorties, activités, voyages. Une sécurité présente sans jamais interférer avec la liberté et la spontanéité de chacun.",
+        body: "Notre service signature. Une surveillance invisible des personnes qui vous sont chères, notamment des enfants, dans leurs cadres privés et de loisirs : sorties, activités, voyages. Une sécurité présente sans jamais interférer avec la liberté et la spontanéité de chacun.",
         points: [
           "Veille discrète lors des sorties et activités",
           "Accompagnement protégé en voyage",

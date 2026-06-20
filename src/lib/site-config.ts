@@ -20,7 +20,7 @@ export const siteConfig = {
   /** Nom court (header / mobile). */
   shortName: "GS&T",
   /** Baseline / slogan principal. */
-  tagline: "Sécurité, discrétion et excellence — partout dans le monde.",
+  tagline: "Sécurité, discrétion et excellence, partout dans le monde.",
   /** Description SEO par défaut. */
   description:
     "Société de protection privée et de services de prestige : protection rapprochée, enquêtes & filatures, transport avec chauffeur privé, conciergerie et majordome. Discrétion absolue, standards d'excellence internationaux.",
@@ -56,7 +56,7 @@ export const siteConfig = {
     company: "GLOBAL SECURE & TRANSPORT", // PLACEHOLDER raison sociale
     legalForm: "SAS", // PLACEHOLDER
     siret: "000 000 000 00000", // PLACEHOLDER
-    address: "Adresse à compléter — Marseille, France", // PLACEHOLDER
+    address: "Adresse à compléter, Marseille, France", // PLACEHOLDER
     cnaps: "AUT-000-0000-00-00-00000000000", // PLACEHOLDER autorisation CNAPS
     publicationDirector: "Direction de la publication à compléter", // PLACEHOLDER
     host: "Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA",

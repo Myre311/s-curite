@@ -74,7 +74,7 @@ export async function submitContact(
   if (!apiKey) {
     // Service d'envoi non configuré : on journalise le lead (échec propre).
     console.warn(
-      "[contact] RESEND_API_KEY absent — lead journalisé sans envoi email :",
+      "[contact] RESEND_API_KEY absent, lead journalisé sans envoi email :",
       lead,
     );
     return {
@@ -92,8 +92,8 @@ export async function submitContact(
       from: "Global Secure & Transport <contact@votre-domaine.com>",
       to: toEmail,
       replyTo: email,
-      subject: `Demande de devis — ${service} — ${name}`,
-      text: `Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone || "—"}\nPrestation: ${service}\n\n${message}`,
+      subject: `Demande de devis, ${service}, ${name}`,
+      text: `Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone || "Non renseigné"}\nPrestation: ${service}\n\n${message}`,
     });
     ===================================================================== */
 

@@ -14,7 +14,7 @@ export const home = {
   signature: {
     eyebrow: "Service signature",
     title: "Protection Discrète des Proches",
-    body: "Le service phare de Global Secure & Transport : une surveillance invisible de vos proches — notamment vos enfants — dans leurs cadres privés et de loisirs (sorties, voyages). Une sécurité de chaque instant, sans jamais interférer avec leur liberté ni leur intimité.",
+    body: "Le service phare de Global Secure & Transport : une surveillance invisible de vos proches, notamment vos enfants, dans leurs cadres privés et de loisirs (sorties, voyages). Une sécurité de chaque instant, sans jamais interférer avec leur liberté ni leur intimité.",
     points: [
       "Surveillance invisible et permanente",
       "Protection des enfants en sorties et en voyage",
@@ -183,7 +183,7 @@ export const home = {
       },
       {
         title: "Dispositif sur-mesure",
-        body: "Un plan adapté à votre mode de vie — visible et formel, ou totalement discret.",
+        body: "Un plan adapté à votre mode de vie, visible et formel, ou totalement discret.",
       },
       {
         title: "Déploiement & suivi",
@@ -195,7 +195,7 @@ export const home = {
   faqPreview: {
     eyebrow: "Questions fréquentes",
     title: "Vous avez des questions ?",
-    body: "Confidentialité, déroulé des missions, zones couvertes — retrouvez les réponses essentielles.",
+    body: "Confidentialité, déroulé des missions, zones couvertes, retrouvez les réponses essentielles.",
     cta: { label: "Consulter la FAQ", href: "/faq" },
   },
 

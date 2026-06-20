@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { faqPage, faqCategories } from "@/content/faq";
 
 export const metadata: Metadata = {
- title: "FAQ — Questions fréquentes",
+ title: "FAQ, Questions fréquentes",
  description: faqPage.intro,
  robots: { index: true, follow: true },
 };

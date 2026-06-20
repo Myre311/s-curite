@@ -14,7 +14,7 @@ export const particuliers = {
   highlights: [
     {
       title: "Protection des proches",
-      body: "Notre service signature : une surveillance invisible de vos proches, notamment des enfants, dans leurs cadres privés et de loisirs — sans interférer avec leur liberté.",
+      body: "Notre service signature : une surveillance invisible de vos proches, notamment des enfants, dans leurs cadres privés et de loisirs, sans interférer avec leur liberté.",
       href: "/services/protection-rapprochee",
     },
     {
