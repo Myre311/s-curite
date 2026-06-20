@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { MapPin, ShieldCheck } from "lucide-react";
+import Image from "next/image";
+import { ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/sections/page-hero";
 import { Reveal } from "@/components/ui/reveal";
@@ -26,17 +27,18 @@ export default function ZonesPage() {
  {zones.map((z, i) => (
  <Reveal key={z.name} delay={i * 0.06}>
  <article className="group">
- {/* Photo de la ville (placeholder doré — à remplacer par une vraie
- photo : <Image src="/photos/zones/<ville>.jpg" fill className="object-cover" />) */}
+ {/* Photo de la ville */}
  <div className="relative aspect-[4/3] overflow-hidden rounded-xl ring-1 ring-or/15 transition-all duration-500 group-hover:ring-or/45">
+ <Image
+ src={z.photo}
+ alt={z.name}
+ fill
+ sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+ className="object-cover transition-transform duration-700 group-hover:scale-105"
+ />
  <div
  aria-hidden
- className="absolute inset-0 bg-[radial-gradient(120%_120%_at_70%_0%,rgba(197,162,83,0.22),transparent_55%),linear-gradient(160deg,#1b1b20,#0a0a0b)] transition-transform duration-700 group-hover:scale-105"
- />
- <MapPin
- aria-hidden
- className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 text-or/35"
- strokeWidth={1}
+ className="absolute inset-0 bg-gradient-to-t from-noir/70 via-noir/10 to-transparent"
  />
  </div>
  {/* Texte EN DESSOUS de la photo */}

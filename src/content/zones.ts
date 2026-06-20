@@ -4,6 +4,7 @@ export type Zone = {
   name: string;
   region: string;
   body: string;
+  photo: string;
 };
 
 export const zones: Zone[] = [
@@ -11,36 +12,43 @@ export const zones: Zone[] = [
     name: "Marseille",
     region: "France",
     body: "Notre ancrage historique. Une connaissance fine du territoire et de ses enjeux, au service d'une protection réactive et discrète.",
+    photo: "/photos/zones/marseille.jpg",
   },
   {
     name: "French Riviera",
     region: "Côte d'Azur",
     body: "De Saint-Tropez à Monaco, un savoir-faire adapté aux résidences d'exception, aux événements privés et à la vie nautique.",
+    photo: "/photos/zones/saint-tropez.jpg",
   },
   {
     name: "Stations de ski",
     region: "Alpes",
     body: "Sécurité et logistique pour vos séjours en altitude, en station comme lors des déplacements de montagne.",
+    photo: "/photos/zones/station-ski.jpg",
   },
   {
     name: "Paris",
     region: "France",
     body: "La capitale et ses exigences : déplacements protégés, sécurisation d'événements et accompagnement de personnalités.",
+    photo: "/photos/zones/paris.jpg",
   },
   {
     name: "Marrakech",
     region: "Afrique du Nord",
     body: "Une présence dédiée pour vos séjours, résidences et déplacements : protection, logistique et discrétion aux standards internationaux.",
+    photo: "/photos/zones/marrakech.jpg",
   },
   {
     name: "Dubaï",
     region: "Émirats arabes unis",
     body: "Sécurité et accompagnement haut de gamme aux Émirats : déplacements protégés, résidences et événements, dans le respect des cadres locaux.",
+    photo: "/photos/zones/dubai.jpg",
   },
   {
     name: "Londres",
     region: "Royaume-Uni",
     body: "Opérations conformes aux licences de sécurité britanniques, au service d'une clientèle internationale.",
+    photo: "/photos/zones/londres.jpg",
   },
 ];
 

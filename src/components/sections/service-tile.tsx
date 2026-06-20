@@ -70,7 +70,7 @@ export function ServiceTile({
  {hasPhoto ? (
  <>
  <Image
- src={`/photos/v2/${slug}-0.jpg`}
+ src={`/photos/v3/${slug}-0.jpg`}
  alt={name}
  fill
  sizes="(min-width: 1024px) 33vw, 50vw"

@@ -100,7 +100,7 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
  label={`Visuel, ${mod.title}`}
  src={
  i < (SERVICE_PHOTO_COUNTS[service.slug] ?? 0)
- ? `/photos/v2/${service.slug}-${i}.jpg`
+ ? `/photos/v3/${service.slug}-${i}.jpg`
  : undefined
  }
  objectPosition={
