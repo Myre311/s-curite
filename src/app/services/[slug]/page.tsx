@@ -28,7 +28,9 @@ const SERVICE_PHOTO_COUNTS: Record<string, number> = {
  * en haut → on cale le cadrage vers le haut.
  */
 const MODULE_OBJECT_POS: Record<string, string> = {
- "enquetes-filatures-1": "object-top",
+ // Sphère Commerciale : on cale le cadrage pour centrer l'appareil photo
+ // (tout en gardant la tête du détective visible).
+ "enquetes-filatures-1": "object-[center_25%]",
 };
 
 export function generateStaticParams() {
