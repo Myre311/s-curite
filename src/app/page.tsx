@@ -18,6 +18,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
 import { HomeHero } from "@/components/sections/home-hero";
 import { ServiceTile } from "@/components/sections/service-tile";
+import { PhotoBand } from "@/components/sections/photo-band";
 import { CtaBand } from "@/components/sections/cta-band";
 import { home } from "@/content/home";
 import { services } from "@/content/services";
@@ -179,6 +180,13 @@ export default function HomePage() {
  </Container>
  </section>
 
+ {/* Bande visuelle — Saint-Tropez */}
+ <PhotoBand
+ src="/photos/v3/home-band-1.jpg"
+ alt="Accompagnement discret d'un groupe dans les rues de Saint-Tropez"
+ position="object-[center_30%]"
+ />
+
  {/* 3. Agence haut de gamme, conçue pour rester invisible */}
  <section className="py-24 sm:py-28">
  <Container>
@@ -212,6 +220,13 @@ export default function HomePage() {
  </Container>
  </section>
 
+ {/* Bande visuelle — famille à Paris (Trocadéro) */}
+ <PhotoBand
+ src="/photos/v3/home-band-2.jpg"
+ alt="Protection rapprochée d'une famille devant la tour Eiffel à Paris"
+ position="object-[center_32%]"
+ />
+
  {/* 4. Conformité / crédibilité (façon « agréée CNAPS ») */}
  <section className=" bg-noir-soft py-24 sm:py-28">
  <Container>
@@ -243,6 +258,13 @@ export default function HomePage() {
  </div>
  </Container>
  </section>
+
+ {/* Bande visuelle — accompagnement scolaire à Marseille */}
+ <PhotoBand
+ src="/photos/v3/home-band-3.jpg"
+ alt="Agent accompagnant un enfant à l'école dans une rue de Marseille"
+ position="object-[center_45%]"
+ />
 
  {/* 5. Témoignages */}
  <section className="py-24 sm:py-28">
