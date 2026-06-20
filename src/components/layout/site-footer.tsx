@@ -124,6 +124,18 @@ export function SiteFooter() {
             </Link>
           </div>
         </div>
+
+        <p className="mt-8 text-center text-xs text-blanc/40">
+          Powered by{" "}
+          <a
+            href="https://www.hidea-solution.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blanc/55 transition-colors hover:text-or"
+          >
+            Hidea Solution
+          </a>
+        </p>
       </Container>
     </footer>
   );

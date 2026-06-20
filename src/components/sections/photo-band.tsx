@@ -10,7 +10,7 @@ type PhotoBandProps = {
 
 /**
  * Bande visuelle cinématique pleine largeur, insérée entre deux sections.
- * Léger dégradé vers le noir en haut/bas pour fusionner avec les sections sombres.
+ * Photo affichée sans filtre ni dégradé.
  */
 export function PhotoBand({
   src,
@@ -29,10 +29,6 @@ export function PhotoBand({
         fill
         sizes="100vw"
         className={`object-cover ${position}`}
-      />
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-gradient-to-b from-noir/70 via-noir/5 to-noir/70"
       />
     </Reveal>
   );
