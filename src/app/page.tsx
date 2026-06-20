@@ -84,7 +84,7 @@ export default function HomePage() {
  >
  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-or/25 transition-all duration-500 group-hover:ring-or/50">
  <Image
- src="/photos/signature-proches.jpg"
+ src="/photos/v2/signature-proches.jpg"
  alt={home.signature.title}
  fill
  sizes="(min-width: 1024px) 40vw, 100vw"
