@@ -83,7 +83,7 @@ export default function HomePage() {
  aria-label={home.signature.cta.label}
  className="group block"
  >
- <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-or/25 transition-all duration-500 group-hover:ring-or/50">
+ <div className="relative aspect-[16/10] overflow-hidden rounded-2xl ring-1 ring-or/25 transition-all duration-500 group-hover:ring-or/50">
  <Image
  src="/photos/v3/signature-proches.jpg"
  alt={home.signature.title}
