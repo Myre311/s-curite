@@ -17,7 +17,7 @@ const SERVICE_PHOTO_COUNTS: Record<string, number> = {
  "protection-rapprochee": 3,
  "enquetes-filatures": 3,
  "transport-personnalite": 2,
- conciergerie: 1,
+ conciergerie: 2,
  majordome: 2,
  billetterie: 2,
 };
