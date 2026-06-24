@@ -16,7 +16,7 @@ import { services, getService } from "@/content/services";
 const SERVICE_PHOTO_COUNTS: Record<string, number> = {
  "protection-rapprochee": 3,
  "enquetes-filatures": 3,
- "transport-personnalite": 1,
+ "transport-personnalite": 2,
  conciergerie: 1,
  majordome: 2,
  billetterie: 2,
@@ -112,6 +112,27 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
  </article>
  </Reveal>
  ))}
+
+ {/* Photos supplémentaires (au-delà d'une par module) — affichées en
+ pleine largeur sous les modules, ex. transport-personnalite-1.jpg. */}
+ {Array.from({
+ length: Math.max(
+ 0,
+ (SERVICE_PHOTO_COUNTS[service.slug] ?? 0) - service.modules.length,
+ ),
+ }).map((_, k) => {
+ const idx = service.modules.length + k;
+ return (
+ <Reveal key={`extra-photo-${idx}`}>
+ <MediaPlaceholder
+ aspectRatio="16 / 9"
+ label={service.name}
+ src={`/photos/v3/${service.slug}-${idx}.jpg`}
+ alt={service.name}
+ />
+ </Reveal>
+ );
+ })}
  </div>
 
  {/* Réassurance */}
