@@ -39,7 +39,7 @@ export default function HomePage() {
  <HomeHero />
 
  {/* 0. Service signature / premium — au-dessus des prestations */}
- <section className="relative overflow-hidden py-20 sm:py-28">
+ <section className="relative overflow-hidden pt-20 pb-10 sm:py-28">
  <div
  aria-hidden
  className="absolute inset-0 bg-[radial-gradient(90%_90%_at_82%_15%,rgba(197,162,83,0.14),transparent_60%)]"
@@ -103,7 +103,7 @@ export default function HomePage() {
  </section>
 
  {/* 1. Services + zones d'intervention */}
- <section id="services" className="scroll-mt-24 py-24 sm:py-28">
+ <section id="services" className="scroll-mt-24 pt-10 pb-24 sm:py-28">
  <Container>
  <SectionHeading
  centered

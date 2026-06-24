@@ -2,7 +2,8 @@
 
 export const home = {
   hero: {
-    eyebrow: "Protection privée, services de prestige & transport",
+    eyebrow:
+      "Cabinet de sûreté, protection & transport de personnes, service majordome & conciergerie",
     title: "Sécurité, discrétion et excellence",
     titleAccent: "pour vous et vos proches.",
     subtitle:
@@ -114,8 +115,8 @@ export const home = {
       {
         quote:
           "Une présence que l'on oublie, une sécurité que l'on ne quitte jamais. Exactement ce que nous recherchions pour notre famille.",
-        author: "Famille privée",
-        context: "Côte d'Azur",
+        author: "Femme d'un joueur de l'OGC Nice",
+        context: "Nice",
       },
       {
         quote:
@@ -125,9 +126,9 @@ export const home = {
       },
       {
         quote:
-          "La protection de mes enfants, assurée sans jamais empiéter sur leur liberté. Irréprochable.",
-        author: "Cliente privée",
-        context: "Paris",
+          "Global Secure & Transport s'occupe du transport domicile-école de nos deux enfants depuis plus d'un an et demi. Toute la famille est ravie et en confiance.",
+        author: "Responsable Airbus",
+        context: "Marignane",
       },
       {
         quote:
@@ -143,25 +144,25 @@ export const home = {
       },
       {
         quote:
-          "Entre deux audiences, je ne me soucie plus de rien : Monsieur X connaît mes horaires, anticipe le trafic et m'attend toujours à la sortie. Voiture impeccable, ponctualité absolue : je travaille ou je souffle pendant le trajet, l'esprit tranquille.",
-        author: "Client",
-        context: "Avocat d'affaires Paris",
+          "Le cabinet a pu envoyer un chauffeur à Genève pour récupérer un membre de ma famille à l'aéroport et l'amener à Cannes à temps pour le festival. Le vol devait initialement atterrir à Nice, mais un contretemps de dernière minute est survenu.",
+        author: "Client privé",
+        context: "Cannes",
       },
       {
         quote:
-          "Je voyage trois semaines par mois. La conciergerie gère tout en mon absence : démarches, livraisons, rendez-vous, intendance de la maison. X me fait un point chaque semaine. J'ai récupéré un temps et une sérénité que je croyais perdus.",
-        author: "Cliente",
-        context: "Dirigeante d'un groupe familial Dubaï",
+          "Le cabinet a pu intervenir dans la nuit pour poster un agent de sécurité devant notre villa, une heure après notre appel, suite au cambriolage d'un voisin. Leur présence a été rassurante et nous a permis de retrouver le sommeil.",
+        author: "Famille privée",
+        context: "Côte d'Azur",
       },
       {
         quote:
-          "L'été, nous recevons beaucoup. X orchestre le personnel, les réceptions et les moindres détails avec une rigueur irréprochable. Nos invités repartent marqués par la qualité du service. Et nous, nous profitons enfin de nos soirées.",
-        author: "Client",
-        context: "Propriétaire d'une villa Côte d'Azur",
+          "L'agent Lucas a accompagné ma femme et mes enfants depuis notre domicile dans le Var jusqu'à notre résidence secondaire à Dubaï, puis est resté sur place cinq jours avant d'effectuer le retour avec eux. Un gain de temps incroyable pour moi qui ai un agenda très chargé.",
+        author: "Khalid",
+        context: "Expert cybersécurité, Dubaï",
       },
       {
         quote:
-          "J'avais promis la finale à mon fils, on me l'avait dite introuvable à trois jours. L'équipe m'a obtenu deux places en tribune, avec le transport et l'accès. Un souvenir qu'il n'oubliera jamais, et zéro stress de mon côté.",
+          "J'avais promis à mon fils la finale de la Ligue des Champions entre le PSG et Arsenal, on me l'avait dite introuvable à trois jours. L'équipe m'a obtenu deux places en tribune, avec le transport et l'accès. Un souvenir qu'il n'oubliera jamais, et zéro stress de mon côté.",
         author: "Client",
         context: "Chef d'entreprise Marseille",
       },

@@ -24,7 +24,7 @@ export function HomeHero() {
   };
 
   return (
-    <section className="relative flex min-h-[92vh] items-center overflow-hidden">
+    <section className="relative flex min-h-[78vh] items-center overflow-hidden sm:min-h-[92vh]">
       {/* Fond : dégradé noir profond + halo doré */}
       <div
         aria-hidden
@@ -85,7 +85,7 @@ export function HomeHero() {
         />
       </motion.div>
 
-      <Container className="relative py-28">
+      <Container className="relative py-14 sm:py-28">
         <motion.div custom={0} variants={item} initial="hidden" animate="visible">
           <span className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.28em] text-or">
             <span aria-hidden className="h-px w-10 bg-or/60" />

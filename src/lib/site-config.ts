@@ -25,7 +25,7 @@ export const siteConfig = {
   description:
     "Société de protection privée et de services de prestige : protection rapprochée, enquêtes & filatures, transport avec chauffeur privé, conciergerie et majordome. Discrétion absolue, standards d'excellence internationaux.",
   /** URL de production (à mettre à jour avant déploiement). */
-  url: "https://www.globalsecuretransport.com", // PLACEHOLDER
+  url: "https://global-secure-transport.vercel.app", // ⚠️ remplacer par le domaine final une fois connecté (ex. https://www.globalsecuretransport.com)
 
   /**
    * COORDONNÉES — PLACEHOLDERS.

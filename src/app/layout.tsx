@@ -28,6 +28,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -35,11 +36,18 @@ export const metadata: Metadata = {
     title: `${siteConfig.name}, ${siteConfig.tagline}`,
     description: siteConfig.description,
     url: siteConfig.url,
+    images: [
+      {
+        url: "/brand/logo-on-black.jpg",
+        alt: siteConfig.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
+    images: ["/brand/logo-on-black.jpg"],
   },
   robots: { index: true, follow: true },
 };
@@ -47,6 +55,19 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: "#0a0a0b",
   colorScheme: "dark",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: siteConfig.name,
+  description: siteConfig.description,
+  url: siteConfig.url,
+  image: `${siteConfig.url}/brand/logo-on-black.jpg`,
+  telephone: siteConfig.contact.phoneDisplay,
+  email: siteConfig.contact.email,
+  areaServed: ["France", "Monaco", "Émirats arabes unis", "International"],
+  priceRange: "€€€€",
 };
 
 export default function RootLayout({
@@ -58,6 +79,10 @@ export default function RootLayout({
       className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-noir text-blanc">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <div aria-hidden className="grain-overlay" />
         <a
           href="#contenu"
